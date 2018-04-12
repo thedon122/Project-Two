@@ -16,3 +16,22 @@ const hostSchema = new Schema({
             type: String
         } 
     })
+const partySchema = new Schema({
+        partyName: {type: String,
+            required: [true, 'Party name is required']
+        },
+        location: {type: String
+        },
+        Date:{type: String
+        },
+        Time: {type:String
+        },
+        Theme: {type:String
+        },
+        Pictureurl: {type:String
+        },
+        host: [hostSchema]
+    
+})
+
+const 

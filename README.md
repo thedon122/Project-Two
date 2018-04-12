@@ -14,7 +14,8 @@ Schema Host{ <br>
     Name: String, <br>
     Contact Email: String, <br>
     Contact Number: String, <br>
-    Picture: url <br>
+    Picture: url, <br>
+    Host: [Party]
 }
 
 Schema Party Goer{ <br>
