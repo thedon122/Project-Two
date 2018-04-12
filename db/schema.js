@@ -4,18 +4,23 @@ const Schema = mongoose.Schema
 // creating a promise that can be used thourgh out the application
 mongoose.Promise = global.Promise
 
-const hostSchema = new Schema({ 
-        name: {type: String,
-            required: [true, 'Host name is required']
-        },
-        contactEmail: {type: String
-        },
-        contactNumber: {type: String
-        },
-        pictureUrl: {
-            type: String
-        } 
-    })
+const partyGoerSchema = new Schema({
+    partyGoerName: {type: String,
+    required: [true, 'Party goer name is required']},
+    costume: {type: String
+    },
+    food: {type: String
+    },
+    gift: {type: String
+    },
+    contactEmail: {type: String
+    },
+    contactNumber: {type: String
+    },
+    pictureUrl: {type: String,
+        default: 'https://facts.be/app/uploads/FACTS-2016-By-FilleRoelants-333-670x447.jpg'
+    },
+})
 const partySchema = new Schema({
         partyName: {type: String,
             required: [true, 'Party name is required']
@@ -34,27 +39,21 @@ const partySchema = new Schema({
         },
         pictureurl: {type:String
         },
-        host: [hostSchema]
-    
+        partyGoerParty: [partyGoerSchema]
 })
 
-const partyGoerSchema = new Schema({
-    partyGoerName: {type: String,
-    required: [true, 'Party goer name is required']},
-    costume: {type: String
-    },
-    food: {type: String
-    },
-    gift: {type: String
+const hostSchema = new Schema({ 
+    name: {type: String,
+        required: [true, 'Host name is required']
     },
     contactEmail: {type: String
     },
     contactNumber: {type: String
     },
-    pictureUrl: {type: String,
-        default: 'https://facts.be/app/uploads/FACTS-2016-By-FilleRoelants-333-670x447.jpg'
-    },
-    party: [partySchema]
+    pictureUrl: {
+        type: String
+    }, 
+    hostToParty: [partySchema]
 })
 
 module.exports = {

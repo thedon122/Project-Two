@@ -34,7 +34,7 @@ mongoose.connection.once('open', () => {
         theme: 'super hero',
         pictureurl: 'https://photos.zillowstatic.com/p_h/ISinlvqxkvh04p0000000000.jpg'
       })
-      host.host.push(marvelParty)
+      hanna.hostToParty.push(marvelParty)
        const luke = new partyGoer({
         partyGoerName: 'Luke Cage',
         costume: 'Iron man',
@@ -44,4 +44,13 @@ mongoose.connection.once('open', () => {
         contactNumber: '5345784974',
         pictureUrl: 'https://i.ytimg.com/vi/0UGYyVjpHjo/maxresdefault.jpg'
        })
+       marvelParty.partyGoerParty.push(luke)
+       return hanna.save()
+  }).then(()=> {
+    mongoose.connection.close()
+    console.log(`
+        Finished seeding database...
+        
+        Disconnected from MongoDB
+      `)
   })
