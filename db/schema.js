@@ -10,7 +10,7 @@ const hostSchema = new Schema({
         },
         contactEmail: {type: String
         },
-        contactNumber: {type: String
+        contactNumber: {type: number
         },
         pictureUrl: {
             type: String
@@ -22,13 +22,13 @@ const partySchema = new Schema({
         },
         location: {type: String
         },
-        Date:{type: String
+        date:{type: String
         },
-        Time: {type:String
+        time: {type:String
         },
-        Theme: {type:String
+        theme: {type:String
         },
-        Pictureurl: {type:String
+        pictureurl: {type:String
         },
         host: [hostSchema]
     
@@ -39,9 +39,9 @@ const partyGoerSchema = new Schema({
     required: [true, 'Party goer name is required']},
     costume: {type: String
     },
-    Food: {type: String
+    food: {type: String
     },
-    Gift: {type: String
+    gift: {type: String
     },
     contactEmail: {type: String
     },
