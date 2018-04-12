@@ -34,7 +34,7 @@ const partySchema = new Schema({
     
 })
 
-const partyGoer = new Schema({
+const partyGoerSchema = new Schema({
     partyGoerName: {type: String,
     required: [true, 'Party goer name is required']},
     costume: {type: String
@@ -47,7 +47,14 @@ const partyGoer = new Schema({
     },
     contactNumber: {type: String
     },
-    pictureUrl: {type: String
+    pictureUrl: {type: String,
+        default: 'https://facts.be/app/uploads/FACTS-2016-By-FilleRoelants-333-670x447.jpg'
     },
     party: [partySchema]
 })
+
+module.exports = {
+    hostSchema,
+    partySchema,
+    partyGoer
+}
