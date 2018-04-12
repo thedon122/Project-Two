@@ -56,5 +56,5 @@ const partyGoerSchema = new Schema({
 module.exports = {
     hostSchema,
     partySchema,
-    partyGoer
+    partyGoerSchema
 }
