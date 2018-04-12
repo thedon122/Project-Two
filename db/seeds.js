@@ -25,8 +25,23 @@ mongoose.connection.once('open', () => {
       })
 
       const marvelParty = new party({
-        partyName:
-        location:
-        Date:
-      }) 
+        partyName: 'newMarvelParty',
+        location: '4577 there Street',
+        city: 'Alpharetta',
+        state: 'FL',
+        date: '06/14/19',
+        time: 'PM 5:00',
+        theme: 'super hero',
+        pictureurl: 'https://photos.zillowstatic.com/p_h/ISinlvqxkvh04p0000000000.jpg'
+      })
+      host.host.push(marvelParty)
+       const luke = new partyGoer({
+        partyGoerName: 'Luke Cage',
+        costume: 'Iron man',
+        food: 'Lays chips',
+        gift: 'Season 1 of Game of Thrones',
+        contactEmail: 'callMe@unknown.com',
+        contactNumber: '5345784974',
+        pictureUrl: 'https://i.ytimg.com/vi/0UGYyVjpHjo/maxresdefault.jpg'
+       })
   })

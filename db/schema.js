@@ -10,7 +10,7 @@ const hostSchema = new Schema({
         },
         contactEmail: {type: String
         },
-        contactNumber: {type: number
+        contactNumber: {type: String
         },
         pictureUrl: {
             type: String
@@ -20,7 +20,11 @@ const partySchema = new Schema({
         partyName: {type: String,
             required: [true, 'Party name is required']
         },
-        location: {type: String
+        street: {type: String
+        },
+        city: {type: String
+        },
+        state: {type: String
         },
         date:{type: String
         },
