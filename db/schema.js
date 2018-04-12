@@ -34,4 +34,20 @@ const partySchema = new Schema({
     
 })
 
-const 
+const partyGoer = new Schema({
+    partyGoerName: {type: String,
+    required: [true, 'Party goer name is required']},
+    costume: {type: String
+    },
+    Food: {type: String
+    },
+    Gift: {type: String
+    },
+    contactEmail: {type: String
+    },
+    contactNumber: {type: String
+    },
+    pictureUrl: {type: String
+    },
+    party: [partySchema]
+})
