@@ -8,9 +8,15 @@
         <h2> Email address {{host.contactEmail}}
     </ul>
     <ul>
-        <h2> Phone Number {{host.contactEmail}}
+        Phone Number {{host.contactEmail}}
     </ul>
     <ul>
-        <h2> Email address {{host.contactEmail}}
+        Email address {{host.contactEmail}}
+    </ul>
+    </h2>
+    <ul>
+        {{#if user.photoUrl}}
+    <img src="{{user.photoUrl}}" alt="{{user.username}}'s host photo"> {{else}}
+    <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="deflaut photo">
     </ul>
 </div>
