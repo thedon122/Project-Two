@@ -5,6 +5,12 @@ const router = express.Router()
 const Host = require('../models/host.js')
 
 router.get('/', (request, response) => {
-    Host.find({})
-    .then(())
+    const hostID = request.params
+    Host.findById({})
+        .then((host) => {
+            response.render('users/index', {
+                users,
+                pageTitle: 'Home'
+            })
+        })
 })

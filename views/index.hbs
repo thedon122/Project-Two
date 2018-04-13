@@ -1,8 +1,16 @@
 <h1>Cosplay Party Time</h1><br>
 <h2>Party Name</h2>
-<input type="text" value={{sPartyName}}>
-<h2></h2>
-<input type="text" value={{sHostName}}><br><br>
+<form action="{{party.id}}?_method=GET" method="GET">
+<div class="form-input">
+    <label for="partyName">Party Name</label> <br>
+    <input type="text" value={{sPartyName}}>
+</div>
+<div class="form-input">
+    <label for="HostName">Host Name</label> <br>
+    <input type="text" value={{sHostName}}>
+</div>  
+
 <button><p>New Party/Host</p></button><br><br>
 <input type="text" value={{hostName}}><br><br>
 <button type="submit">Host Login</button>
+</form>
