@@ -9,7 +9,7 @@ router.get('/:hostID', (request, response) => {
     Host.findById(hostID)
         .then((host) => {
             // renders a list of hosts
-            response.render('host/show', {
+            response.render('hosts/show', {
                 host,
                 pageTitle: 'List of host'
             })

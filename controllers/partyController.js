@@ -12,7 +12,7 @@ router.get('/:partyID', (request, response) => {
         // renders a list of parties
         response.render('party/show', {
             Party,
-            pageTitle: 'List of host'
+            pageTitle: 'List of parities'
         })
         .catch((error) => {
             console.log(error)
