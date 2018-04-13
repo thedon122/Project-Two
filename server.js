@@ -1,3 +1,4 @@
+
 require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
@@ -5,7 +6,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./index');
 var usersRouter = require('./routes/users');
 
 var mongoose = require('mongoose');
@@ -33,12 +34,17 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-app.use('/', indexRouter);
 // Registering controllers
 const hostController = require('./controllers/hostController')
 app.use('/hosts', hostController)
 
+const partyController = require('./controllers/partyController')
+app.use('/hosts/:hostID/party', partyController)
+
+const partyGoerController = require('.controllers/partyGoerController')
+app.use('/hosts/:hostID/party/:partyID')
+
+app.use('/', index);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
