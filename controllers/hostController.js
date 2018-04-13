@@ -4,13 +4,13 @@ const express = require('express')
 const router = express.Router()
 const Host = require('../models/host.js')
 
-router.get('/', (request, response) => {
-    const hostID = request.params
-    Host.findById({})
+router.get('/:hostID', (request, response) => {
+    const hostID = request.params.hostID
+    Host.findById(hostID)
         .then((host) => {
-            response.render('users/index', {
-                users,
-                pageTitle: 'Home'
+            response.render('host/show', {
+                host,
+                pageTitle: host.name
             })
         })
 })
