@@ -10,7 +10,10 @@ router.get('/:hostID', (request, response) => {
         .then((host) => {
             response.render('host/show', {
                 host,
-                pageTitle: host.name
+                pageTitle: 'List of host'
+            })
+            .catch((error) => {
+                console.log(error)
             })
         })
 })
