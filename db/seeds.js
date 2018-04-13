@@ -65,7 +65,7 @@ mongoose.connection.once('open', () => {
         theme: 'super hero',
         pictureurl: 'https://photos.zillowstatic.com/p_h/ISinlvqxkvh04p0000000000.jpg'
       })
-      const mary = new partyGoer({
+      const jane = new partyGoer({
         partyGoerName: 'Jane Hale',
         costume: 'Super girl',
         food: 'boneless chicken wings',
