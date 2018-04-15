@@ -43,7 +43,7 @@ router.get('/:hostID', (request, response) => {
         .then((host) => {
             User.find({})
                 .then((hosts) => {
-                    response.render('users/index', {
+                    response.render('hosts/index', {
                         hosts,
                         pageTitle: 'All Host'
                     })
@@ -58,6 +58,20 @@ router.get('/new', (request, response) => {
     response.render('hosts/new', { pageTitle: 'New Host' })
   })
 
+  router.get('/:hostId/edit', (request, response) => {
+    const hostId = request.params.hostId
+  
+    User.findById(userId)
+      .then((user) => {
+        response.render('hosts/edit', {
+          user,
+          pageTitle: 'Host_Update'
+        })
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
   router.get('/:userId/delete', (request, response) => {
     const userId = request.params.userId
   
@@ -79,3 +93,5 @@ router.get('/new', (request, response) => {
         response.redirect(`/hosts/${hostId}`)
       })
   })
+
+  module.exports = router

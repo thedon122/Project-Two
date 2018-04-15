@@ -1,9 +1,8 @@
-import { request } from 'https';
 
-const router = express.Router({ mergeParams: true })
 const express = require('express')
-const router = express.Router()
-const Party = require('../models/party.js')
+const router = express.Router({ mergeParams: true })
+
+const host = require('../models/host.js')
 // route to display all parties
 router.get('/', (request, response) => {
     User.find({})

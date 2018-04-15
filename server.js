@@ -10,6 +10,7 @@ const bodyParser = require('body-parser')
 // mongoose and method-override
 var mongoose = require('mongoose');
 var methodOverride = require('method-override')
+var indexRouter = require('./routes/index');
 mongoose.connect(process.env.MONGODB_URI);
 // Connection for mongoose to your mongo database
 mongoose.connection.once('open', () => {
@@ -37,6 +38,10 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Registering controllers
+app.use('/', indexRouter);
+app.get('/', (request, response) => {
+  response.redirect('/hosts')
+})
 const index = require('./controllers/index')
 app.use('/', index);
 
