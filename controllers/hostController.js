@@ -1,4 +1,3 @@
-import { request } from 'https';
 
 const express = require('express')
 const router = express.Router()
@@ -55,3 +54,28 @@ router.get('/:hostID', (request, response) => {
         })
 
 })
+router.get('/new', (request, response) => {
+    response.render('hosts/new', { pageTitle: 'New Host' })
+  })
+
+  router.get('/:userId/delete', (request, response) => {
+    const userId = request.params.userId
+  
+    User.findByIdAndRemove(userId)
+      .then(() => {
+        response.redirect('/users')
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  })
+  
+  router.put('/:hostId', (request, response) => {
+    const hostId = request.params.hostId
+    const updatedHostInfo = request.body
+  
+    User.findByIdAndUpdate(hostId, updatedHostInfo, { new: true })
+      .then(() => {
+        response.redirect(`/hosts/${hostId}`)
+      })
+  })
