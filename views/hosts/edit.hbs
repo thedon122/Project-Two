@@ -5,7 +5,7 @@
 
     <h2>Edit Host Info</h2>
     <div>
-        <form action="/hosts" method="POST">
+        <form action="/hosts/{{host._id}}?_method=PUT" method="POST">
             <div class="form-input">
                 <label for="name">name</label>
                 <input type="text" name="name" required/>
@@ -31,7 +31,7 @@
             </div>
             <div class="button-container flex-end">
                 <input class="button primary" type="submit" value="Create Host">
-                <a href="/hosts" class="button warning">Cancel</a>
+                <a href="/hosts/{{host._id}}" class="button warning">Cancel</a>
             </div>
         </form>
     </div>
