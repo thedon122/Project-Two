@@ -17,17 +17,18 @@
         </h2>
 
         {{#if user.photoUrl}}
-        <img src="{{user.photoUrl}}" alt="{{user.username}}'s host photo"> {{else}}
+        <img src="{{host.photoUrl}}" alt="{{host.username}}'s host photo"> {{else}}
         <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="deflaut photo">
     </ul>
         <div class="button-container">
       <div class="button primary">
-        <a href="/hosts/{{user._id}}/edit">Update INFO</a>
+        <a href="/hosts/{{host._id}}/edit">Update INFO</a>
       </div>
       <div class="button warning">
-        <a href="/hosts/{{user._id}}/delete">Delete ME</a>
+        <a href="/hosts/{{host._id}}/delete">Delete ME</a>
       </div>
-<div class="visit-store">
+<div class="visit-Partys">
       <a href="/hosts/{{host._id}}/partys">Partys to host</a>
     </div>
+</div>
 </div>

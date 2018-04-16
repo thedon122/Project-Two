@@ -2,16 +2,32 @@
   <a href="/hosts">Home</a> /
   <a href="/hosts/{{hostId}}">Home</a> /
   <a href="/hosts/{{hostId}}/partys">Partys</a> /
-  <a href="/hosts/{{hostId}}/stores/{{party._id}}">{{party.partyName}}</a> 
+  <a href="/hosts/{{hostId}}/partys/{{party._id}}">{{party.partyName}}</a> 
 </div>
 <div class="card">
-  <form action="/hosts/{{hostId}}/stores/{{store._id}}/gifts" method="POST">
-    <h2>New Gift</h2>
+  <form action="/hosts/{{hostId}}/partys/{{party._id}}/partyGoers" method="POST">
+    <h2>New Party Goer</h2>
     <div class="form-input">
       <label for="partyGoerName">Party goer's name</label>
       <input type="text" name="partyGoerName">
     </div>
     <div class="form-input">
-      <label for="description">Description</label>
-      <input type="text" name="description">
+      <label for="costume">costume</label>
+      <input type="text" name="costume">
+    </div>
+        <div class="form-input">
+      <label for="food">food</label>
+      <input type="text" name="food">
+    </div>
+        <div class="form-input">
+      <label for="contactEmail">Contact Email</label>
+      <input type="text" name="contactEmail">
+    </div>
+            <div class="form-input">
+      <label for="contactNumber">Contact Number</label>
+      <input type="text" name="contactNumber">
+    </div>
+            <div class="form-input">
+      <label for="pictureUrl">Picture Url</label>
+      <input type="text" name="pictureUrl">
     </div>

@@ -47,7 +47,7 @@ app.use('/hosts', hostController)
 const partyController = require('./controllers/partyController')
 app.use('/hosts/:hostID/party', partyController)
 
-const partyGoerController = require('.controllers/partyGoerController')
+const partyGoerController = require('./controllers/partyGoerController')
 app.use('/hosts/:hostID/party/:partyID', partyGoerController)
 
 // catch 404 and forward to error handler

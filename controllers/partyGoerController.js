@@ -1,5 +1,6 @@
-const router = express.Router({ mergeParams: true })
 const express = require('express')
+const router = express.Router({ mergeParams: true })
+
 const Host = require('../models/host.js')
 // route to display all parties
 router.get('/new', (request, response) => {

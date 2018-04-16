@@ -3,12 +3,12 @@
 </div>
 <div class="HostContainer">
     <div class="eachHostContainer">
-        {{#each users}}
-        <a href="/users/{{this._id}}" class="link user-card">
-            <div class="user-image">
+        {{#each hosts}}
+        <a href="/hosts/{{this._id}}" class="link user-card">
+            <div class="host-image">
                 {{#if this.photoUrl}}
-                <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> {{else}}
-                <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> {{/if}}
+                <img src="{{this.photoUrl}}" alt="{{this.username}}'s host photo"> {{else}}
+                <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="{{this.username}}'s profile photo"> {{/if}}
             </div>
             <div class="host-name">
                 {{this.name}}

@@ -4,9 +4,9 @@ const router = express.Router()
 const Host = require('../models/host.js')
 // route to display all host
 router.get('/', (request, response) => {
-    User.find({})
+    Host.find({})
         .then((hosts) => {
-            response.render('users/index', {
+            response.render('hosts/index', {
                 hosts,
                 pageTitle: 'All Host'
             })
