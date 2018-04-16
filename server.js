@@ -38,9 +38,6 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Registering controllers
-app.get('/', (request, response) => {
-  response.redirect('/hosts')
-})
 const index = require('./controllers/index')
 app.use('/', index);
 
@@ -51,7 +48,7 @@ const partyController = require('./controllers/partyController')
 app.use('/hosts/:hostID/party', partyController)
 
 const partyGoerController = require('.controllers/partyGoerController')
-app.use('/hosts/:hostID/party/:partyID')
+app.use('/hosts/:hostID/party/:partyID', partyGoerController)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

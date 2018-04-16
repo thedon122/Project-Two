@@ -37,7 +37,7 @@ const partySchema = new Schema({
         },
         theme: {type:String
         },
-        pictureurl: {type: String
+        pictureUrl: {type: String
         },
         partyGoerParty: [partyGoerSchema]
 })

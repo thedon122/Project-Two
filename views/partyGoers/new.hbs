@@ -1,0 +1,17 @@
+<div class="stepper">
+  <a href="/hosts">Home</a> /
+  <a href="/hosts/{{hostId}}">Home</a> /
+  <a href="/hosts/{{hostId}}/partys">Partys</a> /
+  <a href="/hosts/{{hostId}}/stores/{{party._id}}">{{party.partyName}}</a> 
+</div>
+<div class="card">
+  <form action="/hosts/{{hostId}}/stores/{{store._id}}/gifts" method="POST">
+    <h2>New Gift</h2>
+    <div class="form-input">
+      <label for="partyGoerName">Party goer's name</label>
+      <input type="text" name="partyGoerName">
+    </div>
+    <div class="form-input">
+      <label for="description">Description</label>
+      <input type="text" name="description">
+    </div>

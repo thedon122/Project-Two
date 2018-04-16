@@ -1,19 +1,22 @@
 const router = express.Router({ mergeParams: true })
 const express = require('express')
-const router = express.Router()
-const PartyGoer = require('../models/partyGoer.js')
+const Host = require('../models/host.js')
 // route to display all parties
-router.get('/', (request, response) => {
-    User.find({})
-        .then((partys) => {
-            response.render('users/index', {
-                partys,
-                pageTitle: 'All Parties'
+router.get('/new', (request, response) => {
+    const hostId = request.params.userId
+    const partyId = request.params.storeId
+
+    Host.findById(hostId)
+        .then((host) => {
+            const party = host.partys.id(partyId)
+
+            response.render('hosts/new', {
+                hostId,
+                party,
+                pageTitle: 'New Party Goer'
             })
         })
-        .catch((error) => {
-            console.log(error)
-        })
 })
+
 
 module.exports = router
