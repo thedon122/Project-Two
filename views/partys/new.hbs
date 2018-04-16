@@ -1,0 +1,41 @@
+<div class="stepper">
+    <a href="/">Home</a> / New Party
+    <a href="/hosts/{{hostId}}">Host</a>
+    <a href="/hosts/{{hostId}}/partys">Partys</a> /New Party
+</div>
+
+<div class="note">
+
+    <h2>New Party Info</h2>
+    <div>
+        <form action="/hosts/{{hostId}}/partys" method="POST">
+            <div class="form-input">
+                <label for="partyName">Party name</label>
+                <input type="text" name="name" required>
+            </div>
+
+            <div class="form-input">
+                <label for="street">Street Address</label>
+                <input type="text" name="street">
+            </div>
+
+            <div class="form-input">
+                <label for="city">City</label>
+                <input type="text" name="city">
+            </div>
+
+            <div class="form-input">
+                <label for="state">State</label>
+                <input type="text" name="state">
+            </div>
+
+            <div class="form-input">
+                <label for="date">Date</label>
+                <input type="text" name="date">
+            </div>
+
+            <div class="form-input">
+                <label for="time">City</label>
+                <input type="text" name="time">
+            </div>
+    </div>
