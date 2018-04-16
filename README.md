@@ -11,7 +11,6 @@ This is a full stack website that use a server, database, and live hosting site 
 <li>https://trello.com/b/9WCZly7F/party-time</li>
 <h1>Used Projects</h1>
 <li>https://github.com/danielpinoga/gift-returns</li>
-<li>https://git.generalassemb.ly/jamieking/soda-app-unit-2</li>
 <h1>Frame Work</h1>
 
 <h2> data model</h2>
