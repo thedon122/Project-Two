@@ -7,14 +7,14 @@
         <a href="/users/{{this._id}}" class="link user-card">
             <div class="user-image">
                 {{#if this.photoUrl}}
-                <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> {{else}}
-                <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> {{/if}}
+                <img src="{{this.photoUrl}}" alt="{{this.partyName}}'s photo"> {{else}}
+                <img src="https://photos.zillowstatic.com/p_h/IS660upyer0pc01000000000.jpg" alt="{{this.username}}'s profile photo"> {{/if}}
             </div>
-            <div class="host-name">
-                {{this.name}}
+            <div class="Party-name">
+                {{this.partyName}}
             </div>
             <div class="host-contact">
-                {{this.contactEmail}} {{this.contactNumber}}
+                {{this.street} {{this.date}}
             </div>
         </a>
         {{/each}}
