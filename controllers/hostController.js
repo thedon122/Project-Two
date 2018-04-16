@@ -15,7 +15,9 @@ router.get('/', (request, response) => {
             console.log(error)
         })
 })
-
+router.get('/new', (request, response) => {
+    response.render('hosts/new', { pageTitle: 'New Host' })
+  })
 // route to search for host names
 router.get('/:hostID', (request, response) => {
     const hostID = request.params.hostID
@@ -41,7 +43,7 @@ router.get('/:hostID', (request, response) => {
             console.log(error)
         })
         .then((host) => {
-            User.find({})
+            Host.find({})
                 .then((hosts) => {
                     response.render('hosts/index', {
                         hosts,
@@ -54,17 +56,14 @@ router.get('/:hostID', (request, response) => {
         })
 
 })
-router.get('/new', (request, response) => {
-    response.render('hosts/new', { pageTitle: 'New Host' })
-  })
 
   router.get('/:hostId/edit', (request, response) => {
     const hostId = request.params.hostId
   
-    User.findById(userId)
-      .then((user) => {
+    Host.findById(hostId)
+      .then((host) => {
         response.render('hosts/edit', {
-          user,
+          host,
           pageTitle: 'Host_Update'
         })
       })

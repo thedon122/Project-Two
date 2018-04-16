@@ -2,10 +2,10 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
 
-const host = require('../models/host.js')
+const Host = require('../models/host.js')
 // route to display all parties
 router.get('/', (request, response) => {
-    User.find({})
+    Host.find({})
         .then((partys) => {
             response.render('users/index', {
                 partys,
@@ -42,9 +42,9 @@ router.get('/:hostID', (request, response) => {
             console.log(error)
         })
         .then((host) => {
-            User.find({})
+            Host.find({})
                 .then((partys) => {
-                    response.render('users/index', {
+                    response.render('hosts/index', {
                         partys,
                         pageTitle: 'All Host'
                     })
