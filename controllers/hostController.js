@@ -21,6 +21,16 @@ router.get('/new', (request, response) => {
 
   router.post('/', (request, response) => {
       const newHost = request.body
+      if (!newHost.photoUrl) {
+        newHost.photoUrl = 'http://www.fillmurray.com/g/300/300'
+      }
+      Host.create(newHost)
+      .then(() => {
+          response.redirect('hosts')
+      })
+      .catch((error) => {
+        console.log(error)
+      })
   })
 // route to search for host names
 router.get('/:hostID', (request, response) => {
@@ -91,7 +101,7 @@ router.get('/:hostID', (request, response) => {
     const hostId = request.params.hostId
     const updatedHostInfo = request.body
   
-    User.findByIdAndUpdate(hostId, updatedHostInfo, { new: true })
+    Host.findByIdAndUpdate(hostId, updatedHostInfo, { new: true })
       .then(() => {
         response.redirect(`/hosts/${hostId}`)
       })

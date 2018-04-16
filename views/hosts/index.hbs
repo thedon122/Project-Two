@@ -6,8 +6,8 @@
         {{#each hosts}}
         <a href="/hosts/{{this._id}}" class="link user-card">
             <div class="host-image">
-                {{#if this.photoUrl}}
-                <img src="{{this.photoUrl}}" alt="{{this.username}}'s host photo"> {{else}}
+                {{#if this.pictureUrl}}
+                <img src="{{this.pictureUrl}}" alt="{{this.username}}'s host photo"> {{else}}
                 <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="{{this.username}}'s profile photo"> {{/if}}
             </div>
             <div class="host-name">
