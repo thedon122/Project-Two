@@ -3,8 +3,9 @@
 </div>
 <div class="partyContainer">
     <div class="eachPartyContainer">
-        {{#each users}}
-        <a href="/users/{{this._id}}" class="link user-card">
+        {{#each partys}}
+        <a class="cancel" href="/hosts/{{../hostId}}/partys/{{this._id}}/delete">X</a>
+        <a href="/hosts/{{{../userId}}/partys/{{this._id}}" class="link party-card">
             <div class="user-image">
                 {{#if this.photoUrl}}
                 <img src="{{this.photoUrl}}" alt="{{this.partyName}}'s photo"> {{else}}
@@ -13,7 +14,7 @@
             <div class="Party-name">
                 {{this.partyName}}
             </div>
-            <div class="host-contact">
+            <div class="party-contact">
                 {{this.street} {{this.date}}
             </div>
         </a>

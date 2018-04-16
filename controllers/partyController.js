@@ -55,3 +55,5 @@ router.get('/:hostID', (request, response) => {
         })
 
 })
+
+module.exports = router
