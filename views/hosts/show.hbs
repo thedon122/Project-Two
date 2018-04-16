@@ -5,18 +5,29 @@
 <h1>{{host.name}}</h1>
 <div class="user-holder">
     <ul>
-        <h2> Email address {{host.contactEmail}}
-    </ul>
-    <ul>
-        Phone Number {{host.contactEmail}}
-    </ul>
-    <ul>
-        Email address {{host.contactEmail}}
-    </ul>
-    </h2>
-    <ul>
+        <li>
+            <h2> Email address {{host.contactEmail}}
+        </li>
+
+        <li> Phone Number {{host.contactEmail}}
+        </li>
+
+        <li> Email address {{host.contactEmail}}
+        </li>
+        </h2>
+
         {{#if user.photoUrl}}
-    <img src="{{user.photoUrl}}" alt="{{user.username}}'s host photo"> {{else}}
-    <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="deflaut photo">
+        <img src="{{user.photoUrl}}" alt="{{user.username}}'s host photo"> {{else}}
+        <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="deflaut photo">
     </ul>
+        <div class="button-container">
+      <div class="button primary">
+        <a href="/hosts/{{user._id}}/edit">Update INFO</a>
+      </div>
+      <div class="button warning">
+        <a href="/hosts/{{user._id}}/delete">Delete ME</a>
+      </div>
+<div class="visit-store">
+      <a href="/hosts/{{host._id}}/partys">Partys to host</a>
+    </div>
 </div>

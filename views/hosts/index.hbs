@@ -1,10 +1,27 @@
-<head>
-</head>
-<body>
-    
-</body>
-</html>
 <div class="stepper">
     <h1>Host Home Page</h1>
 </div>
-<div class="hostContainer"></div>
+<div class="HostContainer">
+    <div class="eachHostContainer">
+        {{#each users}}
+        <a href="/users/{{this._id}}" class="link user-card">
+            <div class="user-image">
+                {{#if this.photoUrl}}
+                <img src="{{this.photoUrl}}" alt="{{this.username}}'s profile photo"> {{else}}
+                <img src="https://picsum.photos/200/300" alt="{{this.username}}'s profile photo"> {{/if}}
+            </div>
+            <div class="host-name">
+                {{this.name}}
+            </div>
+            <div class="host-contact">
+                {{this.contactEmail}} {{this.contactNumber}}
+            </div>
+        </a>
+        {{/each}}
+    </div>
+    <div class="button primary">
+        <a href="/hosts/new">
+            New Host
+        </a>
+    </div>
+</div>

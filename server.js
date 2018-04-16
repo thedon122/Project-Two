@@ -38,7 +38,6 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Registering controllers
-app.use('/', indexRouter);
 app.get('/', (request, response) => {
   response.redirect('/hosts')
 })
