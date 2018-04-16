@@ -1,35 +1,39 @@
 <div class="stepper">
     <a href="/hosts">Home</a>
 </div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-9 col-sm-12">
+            <h1>{{host.name}}</h1>
+            <div class="user-holder">
+                <ul>
+                    <li>
+                    <h2> Email address {{host.contactEmail}}
+                    </li>
 
-<h1>{{host.name}}</h1>
-<div class="user-holder">
-    <ul>
-        <li>
-            <h2> Email address {{host.contactEmail}}
-        </li>
+                    <li> Phone Number {{host.contactEmail}}
+                    </li>
 
-        <li> Phone Number {{host.contactEmail}}
-        </li>
+                    <li> Email address {{host.contactEmail}}
+                    </li>
+                    </h2>
 
-        <li> Email address {{host.contactEmail}}
-        </li>
-        </h2>
-
-        {{#if user.pictureUrl}}
-        <img src="{{host.pictureUrl}}" alt="{{host.username}}'s host photo"> {{else}}
-        <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="deflaut photo">
-    </ul>
-    {{/if}}
-        <div class="button-container">
-      <div class="button primary">
-        <a href="/hosts/{{host._id}}/edit">Update INFO</a>
-      </div>
-      <div class="button warning">
-        <a href="/hosts/{{host._id}}/delete">Delete ME</a>
-      </div>
-<div class="visit-Partys">
-      <a href="/hosts/{{host._id}}/partys">Partys to host</a>
+                    {{#if user.pictureUrl}}
+                    <img src="{{host.pictureUrl}}" alt="{{host.username}}'s host photo"> {{else}}
+                    <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="deflaut photo">
+                </ul>
+                {{/if}}
+                <div class="button-container">
+                    <div class="button primary">
+                        <a href="/hosts/{{host._id}}/edit">Update INFO</a>
+                    </div>
+                    <div class="button warning">
+                        <a href="/hosts/{{host._id}}/delete">Delete ME</a>
+                    </div>
+                </div>
+                <div class="visit-Partys">
+                    <a href="/hosts/{{host._id}}/partys">Partys to host</a>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>

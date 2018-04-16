@@ -6,7 +6,7 @@
             <div class="container">
             <div class="row">
             {{#each hosts}}
-            <div class= "col-lg-4" "col-md-3" "col-sm-12">
+            <div class= "col-lg-4 col-md-6 col-sm-12">
                 <a href="/hosts/{{this._id}}" class="link user-card">
                     <div class="host-image">
                         {{#if this.pictureUrl}}
@@ -26,9 +26,10 @@
             </div>
         </div>
     </div>
-    <div class="button primary">
-        <a href="/hosts/new">
+    <div class="button-primary">
+        <a href="/hosts/new"><p>
             New Host
+            </p>
         </a>
     </div>
 </div>
