@@ -18,6 +18,10 @@ router.get('/', (request, response) => {
 router.get('/new', (request, response) => {
     response.render('hosts/new', { pageTitle: 'New Host' })
   })
+
+  router.post('/', (request, response) => {
+      const newHost = request.body
+  })
 // route to search for host names
 router.get('/:hostID', (request, response) => {
     const hostID = request.params.hostID
