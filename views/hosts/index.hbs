@@ -1,35 +1,48 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">{{pageTitle}}</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/">Home</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="stepper">
     <h1>Host Home Page</h1>
 </div>
-    <div class="HostContainer">
-        <div class="eachHostContainer">
-            <div class="container">
+<div class="HostContainer">
+    <div class="eachHostContainer">
+        <div class="container">
             <div class="row">
-            {{#each hosts}}
-            <div class= "col-lg-4 col-md-6 col-sm-12">
-                <a href="/hosts/{{this._id}}" class="link user-card">
-                    <div class="host-image">
-                        {{#if this.pictureUrl}}
-                        <img src="{{this.pictureUrl}}" alt="{{this.username}}'s host photo"> {{else}}
-                        <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="{{this.username}}'s profile photo"> {{/if}}
-                    </div>
-                    <div class="host-name">
-                        {{this.name}}
-                    </div>
-                    <div class="host-contact">
-                        {{this.contactEmail}} {{this.contactNumber}}
-                    </div>
-                </a>
-            </div>
-            {{/each}}
-            </div>
+                {{#each hosts}}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <a href="/hosts/{{this._id}}" class="link user-card">
+                        <div class="host-image">
+                            {{#if this.pictureUrl}}
+                            <img src="{{this.pictureUrl}}" alt="{{this.username}}'s host photo"> {{else}}
+                            <img src="http://www.teamtekko.us/wp-content/uploads/sites/15/2017/01/cosplay-group-2.jpg" alt="{{this.username}}'s profile photo"> {{/if}}
+                        </div>
+                        <div class="host-name">
+                            {{this.name}}
+                        </div>
+                        <div class="host-contact">
+                            {{this.contactEmail}} {{this.contactNumber}}
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
             </div>
         </div>
     </div>
-    <div class="button-primary">
-        <a href="/hosts/new"><p>
+</div>
+<div class="button-primary">
+    <a href="/hosts/new">
+        <p>
             New Host
-            </p>
-        </a>
-    </div>
+        </p>
+    </a>
+</div>
 </div>

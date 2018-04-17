@@ -7,7 +7,7 @@ const Host = require('../models/host.js')
 router.get('/', (request, response) => {
     Host.find({})
         .then((partys) => {
-            response.render('users/index', {
+            response.render('partys/index', {
                 partys,
                 pageTitle: 'All Parties'
             })

@@ -1,9 +1,19 @@
+<nav class="navbar navbar-expand-sm bg-light navbar-light">
+    <ul class="navbar-nav">
+        <li class="nav-item active">
+            <a class="nav-link" href="/">{{pageTitle}}</a>
+        </li>
+        <li class="nav-item">
+      <a class="nav-link" href="/hosts">Hosts</a>
+    </li>
+    </ul>
+</nav>
 <h1>Cosplay Party Time</h1>
 <br>
 <h2>Party Name</h2>
-    <a href="/hosts">
-        <button>Show all hosts</button>
-    </a>
+<a href="/hosts">
+    <button>Show all hosts</button>
+</a>
 <form action="/party/{{party._id}}?_method=GET" method="GET">
     <div class="form-input">
         <label for="partyName">Party Name</label>
@@ -27,7 +37,7 @@
 <form action="" method="GET"></form>
 <button>
     <a href="/hosts/new">
-    <p>New Party/Host</p>
+        <p>New Party/Host</p>
     </a>
 </button>
 <br>
