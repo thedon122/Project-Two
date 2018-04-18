@@ -24,7 +24,7 @@ body{
   width: 30%
 }
 .host-image{
- width: 80%
+ width: 100%
 }
 
 img{
@@ -44,4 +44,10 @@ img{
   background-color: white;
   text-align: center;
   margin: 0 auto;
+}
+.eachHostContainer{
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 20px
 }
