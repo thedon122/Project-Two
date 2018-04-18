@@ -4,8 +4,8 @@
             <a class="nav-link" href="/">{{pageTitle}}</a>
         </li>
         <li class="nav-item">
-      <a class="nav-link" href="/hosts">Hosts</a>
-    </li>
+            <a class="nav-link" href="/hosts">Hosts</a>
+        </li>
     </ul>
 </nav>
 <h1>Cosplay Party Time</h1>
@@ -14,35 +14,10 @@
 <a href="/hosts">
     <button>Show all hosts</button>
 </a>
-<form action="/party/{{party._id}}?_method=GET" method="GET">
-    <div class="form-input">
-        <label for="partyName">Party Name</label>
-        <br>
-        <br>
-        <input type="text" value='Enter party name here' name="sPartyName">
-        <br>
-        <br>
-    </div>
-</form>
-<form action="/host/{{host._id}}?_method=GET" method="GET">
-    <div class="form-input">
-        <label for="HostName">Host Name</label>
-        <br>
-        <br>
-        <input type="text" value='Enter host here'>
-        <br>
-        <br>
-    </div>
-</form>
+
 <form action="" method="GET"></form>
 <button>
     <a href="/hosts/new">
         <p>New Party/Host</p>
     </a>
 </button>
-<br>
-<br>
-<input type="text" value='Enter host name here'>
-<br>
-<br>
-<button type="submit">Host Login</button>
