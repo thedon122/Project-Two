@@ -13,9 +13,16 @@ a:link {
 
 
 body{
-  
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpNnkjvTTJaD0jWcgm9hwi0Pv9ZpzvpyxtKC3lXVKDxh9yKJhtVQ');
+  background-size: 50%;
 }
 
+.mainBody{
+  text-align: center;
+  background-color: white;
+  margin: 0 auto;
+  width: 30%
+}
 .host-image{
  width: 80%
 }
@@ -28,4 +35,13 @@ img{
 .button-primary{
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 20px;
+}
+
+.btn-info{
+  margin-bottom: 30px
+}
+.partyContainer{
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
 }

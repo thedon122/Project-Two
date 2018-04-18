@@ -2,8 +2,8 @@
     <h1>Party Home Page</h1>
 </div>
 <div class="partyContainer">
-    <div class="eachPartyContainer">
         {{#each partys}}
+        <div class="eachPartyContainer">
         <a class="cancel" href="/hosts/{{../hostId}}/partys/{{this._id}}/delete">X</a>
         <a href="/hosts/{{{../userId}}/partys/{{this._id}}" class="link party-card">
             <div class="user-image">
@@ -18,8 +18,9 @@
                 {{this.street} {{this.date}}
             </div>
         </a>
+        </div>
         {{/each}}
-    </div>
+    
     <div class="button primary">
         <a href="/hosts/new">
             New Host
